@@ -7,7 +7,10 @@ module.exports = async ({ graphql, actions }) => {
       wpcontent {
         pages {
           nodes {
+            id
+            isFrontPage
             uri
+            title
             content
           }
         }

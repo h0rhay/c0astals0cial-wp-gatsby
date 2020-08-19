@@ -1,17 +1,17 @@
-// src/templates/post/index.js
+//src/templates/posts/index.js
+
 import React  from 'react'
-import Layout from '../../components/layout'
-import SEO from '../../components/SEO'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const Post = ({ pageContext }) => {
-  const post = pageContext.post
-
+  const { title, content } = pageContext.post
   return (
     <Layout>
-      <SEO title={post.title} />
+      <SEO title={title} />
 
-      <h1> {post.title} </h1>
-      <div dangerouslySetInnerHTML={{__html: post.content}} />
+      <h1>{title}</h1>
+      <div dangerouslySetInnerHTML={{__html: content}} />
 
     </Layout>
   )
